@@ -5,12 +5,9 @@ def solution(arr):
     start = 0
     largest_amps = []
     for i in arr:
-        current_amp = 0
         curr_ind = 0
         for j in range(start, len(arr)):
             if(arr[j] - i < 2):
-                if((arr[j] - i) > current_amp):
-                    current_amp = arr[j] - i
                 curr_ind = curr_ind + 1
             else:
                 break
