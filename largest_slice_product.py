@@ -12,25 +12,25 @@ def max_in_dic(dic):
 
 def solution(arr):
     dic = {}
+    jump = 0
     for r in range(len(arr)):
         breaker = 0
         dic[r] = [arr[r]]
-        for c in range(len(dic)):
+        c = jump
+        while c < len(dic):
             val_arr = dic[c]
             val = val_arr[len(val_arr)-1] * arr[r]
             if(val == 0):
-                breaker = 1
-                break;
-            if(r != c):
+                jump = jump + 1
+            elif(r != c):
                 dic[c].append(val)
-        if(breaker == 1):
-            break
+            c = c + 1
     return max_in_dic(dic)
 
 if __name__ == "__main__":
-    arr = []
-    for i in range(10):
-        arr.append(random.randint(-10, 10))
+    arr = [-3, 0, 5, 0.2, -4, -.6, 8, 0, 2.4, 0.5]
+    # for i in range(10):
+    #     arr.append(random.randint(-10, 10))
     print(arr)
     sol = solution(arr)
     print(sol)
