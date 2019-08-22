@@ -1,6 +1,6 @@
 # Coding-Mind-Twisters
 
-Includes various problems which I am going to solve. Solutions are based on correctness, there could be multiple other better solutions in terms of time and space complexity.
+Includes various problems which I am going to solve. Most are from Leetcode. Solutions are based on correctness, there could be multiple other better solutions in terms of time and space complexity.
 
 1- Tom & Jerry in a Maze: Involves finding shortest path in a maze. Solved it using Queues and Backtracking.
 
